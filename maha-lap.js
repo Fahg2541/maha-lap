@@ -41,22 +41,14 @@ class MahaLap {
         // }
     }
 
-    // static tamnaiWithDay(story) {
-    //     const length = story.length;
-    //     let num = 0;
-    //     for (var i = 0; i <= length; i++) {
-    //         num += i;
-    //     }
-    //     switch (num) {
-    //         case 3:
-    //             return num;
-    //         case 6:
-    //             return num;
-    //         default:
-    //             return 3;
-    //     }
-
-    // }
+    static tamnaiWithstory(story) {
+        const length = story.length;
+        let sum = 0;
+        for (let i = 1; i <= length; i++) {
+            sum += i;
+        }
+        return sum % 100;
+    }
 }
 
 module.exports = MahaLap;

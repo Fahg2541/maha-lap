@@ -42,7 +42,15 @@ describe("Test Maha-Lap", () => {
         expect(result).toEqual(31);
     });
     test("Test Tamnai with day", () => {
-        const result = MahaLap.tamnaiWithDay("งู");
+        const result = MahaLap.tamnaiWithstory("งู");
         expect(result).toEqual(3);
     });
+    test("Test Tamnai with day", () => {
+        const result = MahaLap.tamnaiWithstory("งูกับแมว");
+        expect(result).toEqual(36);
+    });
+    // test("Test Tamnai with time day ramdom = 98 return 98", () => {
+    //     const result = MahaLap.tamnaiWithTime("กลางวัน");
+    //     expect(result).toEqual(98);
+    // });
 });
