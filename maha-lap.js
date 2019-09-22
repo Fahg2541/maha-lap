@@ -76,7 +76,7 @@ class MahaLap {
         const resultDay = this.tamnaiWithDay(day);
         const resultstory = this.tamnaiWithstory(story);
         const resulttime = this.tamnaiWithTime(time);
-        return (resultDay * resultstory * resulttime * 10) % 1000;
+        return (resultDay * resultstory * resulttime * 100) % 1000;
     }
 }
 
