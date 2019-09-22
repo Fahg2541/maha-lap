@@ -1,6 +1,7 @@
-const express = require('express')
-const app = express()
-const port = 3000
+const express = require('express');
+const app = express();
+const port = 3000;
+const MahaLap = require("./maha-lap");
 
 app.get('/', (req, res) => res.send("เจริญพรจ้า!!!!"));
 app.get("/namo", (req, res) => {
@@ -13,4 +14,4 @@ app.get("/namo", (req, res) => {
     });
 });
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
