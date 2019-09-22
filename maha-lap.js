@@ -1,6 +1,6 @@
 class MahaLap {
     static tamnaiWithDay(day) {
-        switch (day) {
+        switch (true) {
             case "อาทิตย์":
                 return 1;
             case "จันทร์":
@@ -25,7 +25,22 @@ class MahaLap {
             default:
                 return 99;
         }
+    }
 
+    static tamnaiWithDay(story) {
+        const length = story.length;
+        let num = 0;
+        for (var i = 0; i <= length; i++) {
+            num += i;
+        }
+        switch (num) {
+            case 3:
+                return num;
+            case 6:
+                return num;
+            default:
+                return 3;
+        }
 
     }
 }
