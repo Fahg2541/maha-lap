@@ -4,6 +4,9 @@ const port = 3000;
 const MahaLap = require("./maha-lap");
 
 app.get('/', (req, res) => res.send("เจริญพรจ้า!!!!"));
+
+app.use("/public", express.static("public"));
+
 app.get("/namo", (req, res) => {
     const day = req.query.day;
     const story = req.query.story;
