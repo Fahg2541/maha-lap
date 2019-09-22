@@ -49,8 +49,34 @@ describe("Test Maha-Lap", () => {
         const result = MahaLap.tamnaiWithstory("งูกับแมว");
         expect(result).toEqual(36);
     });
-    // test("Test Tamnai with time day ramdom = 98 return 98", () => {
-    //     const result = MahaLap.tamnaiWithTime("กลางวัน");
-    //     expect(result).toEqual(98);
-    // });
+    test("Test Tamnai with time day ramdom = 0.98 return 0.98", () => {
+        global.Math.random = jest.fn(() => 0.98);
+        const result = MahaLap.tamnaiWithTime("กลางวัน");
+        expect(result).toEqual(0.98);
+    });
+    test("Test Tamnai with time Night ramdom = 0.5 return 0.5", () => {
+        global.Math.random = jest.fn(() => 0.4);
+        const result = MahaLap.tamnaiWithTime("กลางวัน");
+        expect(result).toEqual(0.5);
+    });
+    test("Test Tamnai with time Night ramdom = 0.4 return 0.4", () => {
+        global.Math.random = jest.fn(() => 0.4);
+        const result = MahaLap.tamnaiWithTime("กลางคืน");
+        expect(result).toEqual(0.4);
+    });
+    test("Test Tamnai with time Night ramdom = 0.64 return 0.5", () => {
+        global.Math.random = jest.fn(() => 0.64);
+        const result = MahaLap.tamnaiWithTime("กลางคืน");
+        expect(result).toEqual(0.5);
+    });
+    test("Test Tamnai with time Night ramdom = 0.5 return 0.5", () => {
+        global.Math.random = jest.fn(() => 0.5);
+        const result = MahaLap.tamnaiWithTime("กลางคืน");
+        expect(result).toEqual(0.5);
+    });
+    test("Test Tamnai with time Night ramdom = 0.1 return 0.1", () => {
+        global.Math.random = jest.fn(() => 0.1);
+        const result = MahaLap.tamnaiWithTime("กลางคืน");
+        expect(result).toEqual(0.1);
+    });
 });
